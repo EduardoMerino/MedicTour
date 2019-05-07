@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MedicTour</title>
+    <link rel="icon" href="theme/img/logo-new.png">
+
+    <!-- jQuery -->
+    <script src="theme/vendor/jquery/jquery.min.js"></script>
+
+    <!-- My JS Register API -->
+    <script src="registerAPI.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="theme/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="theme/vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="theme/vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="theme/vendor/device-mockups/device-mockups.css">
+
+    <!-- Theme CSS -->
+    <link href="theme/css/new-age.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" style="padding-bottom:9px">
+                <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button> -->
+                <a class="navbar-brand page-scroll" href="#page-top" style="padding:0px"><img src="theme/img/Logo4.png" alt="MedicTour" style="height:60px;width:200px;"></img></a>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">MedicTour</a> -->
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- What’s my ailment? -->
+    <header>
+        <div class="container" id="page-top">
+            <div class="row" style="text-align: center">
+                <div class="col-md-12 col-md-offset-2" style="text-align: center">
+                    <div class="header-content" style="text-align: center">
+                      <!-- TITLE -->
+                        <div class="header-content-inner" style="width:800px; margin:0 auto;">
+                            <h1>What’s my ailment?</h1>
+                            <form>
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="ailment" placeholder="Describe the kind of procedure you need. Example: Eye Surgery.">
+                                </br>
+                                <p>Which medic’s specialty are you looking for?</p>
+                                <select class="form-control" id="speciality">
+                                  <!-- Here there must be a way to connect to the database
+                                  and display the options of doctors stored there -->
+                                  <option value="none"> - select - </option>
+                                </select>
+                              </div>
+                            </form>
+                            <a id="show-hospital" href="#hospital" class="btn btn-outline btn-xl page-scroll">OK</a>
+
+                        </div>
+                      <!--END TITLE-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- END What’s my ailment? -->
+
+    <!-- HOSPITAL -->
+    <section id="hospital" class="download bg-primary text-center">
+        <div class="container">
+          <div class="row"><!-- Row 1 -->
+              <div class="col-md-8 col-md-offset-2">
+                  <h2 class="section-heading">Where do I want to get my treatment?</h2>
+                  <p>Find the hospital you would like to get your treatment,
+                    click on one to see the different medics of each hospital.</p>
+              </div><!-- END  Row 1 -->
+              <div class="row"><!-- Row 2 -->
+                <div class="col-md-4 col-sm-4 col-xs-6 portfolio-item" style="text-align: left">
+                  <a href="#details" class="show-details" id="show-detail-sur">
+                    <img class="img-responsive hover"  src="theme/img/hospital-sur.jpg" alt="">
+                  </a>
+                  <h3>Centro Médico Puerta de Hierro Sur</h3>
+                  <p>
+                    Av. Adolfo López Mateos Sur # 1401 </br>
+                    Col. Las Amapas, C.P. 45640 </br>
+                    Tlajomulco de Zúñiga, Jalisco, México </br>
+                    Tel: +52 (33) 3040.7000
+                  </p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 portfolio-item" style="text-align: left">
+                  <a href="#details" class="show-details" id="show-detail-zapopan">
+                    <img class="img-responsive hover"   src="theme/img/hospital-zapopan.jpg" alt="">
+                  </a>
+                  <h3>Centro Médico Puerta de Hierro</h3>
+                  <p>
+                    Av. Empresarios # 150 </br>
+                    Col. Puerta de Hierro, C.P. 45116 </br>
+                    Zapopan, Jalisco, México </br>
+                    Tel: +52 (33) 3848.2100
+                  </p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 portfolio-item" style="text-align: left">
+                  <a href="#details" class="show-details" id="show-detail-ambulatoria">
+                    <img class="img-responsive hover" src="theme/img/hospital-ambulatoria.jpg" alt="">
+                  </a>
+                  <h3>Centro de Cirugía Ambulatoria</h3>
+                  <p>
+                    Blvd. Puerta de Hierro # 5150 </br>
+                    Col. Puerta de Hierro, C.P. 45116 </br>
+                    Zapopan, Jalisco, México </br>
+                    Tel: +52 (33) 3848.4000
+                  </p>
+                </div>
+              </div><!-- END Row 2 -->
+              <div class="row"><!-- Row 3 -->
+                <div class="col-md-2 col-sm-2 col-xs-0 portfolio-item" style="text-align: left">
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 portfolio-item" style="text-align: left">
+                  <a href="#details" class="show-details" id="show-detail-tepic">
+                    <img class="img-responsive hover"  src="theme/img/hospital-tepic.jpg" alt="">
+                  </a>
+                  <h3>Centro Médico Puerta de Hierro Tepic</h3>
+                  <p>
+                    Av. Ingenieros Industriales # 221 </br>
+                    Fracc. Ciudad Industrial Tepic Nayarit, C.P. 63175 </br>
+                    Tepic, Nayarit, México </br>
+                    Tel: +52 (311) 129.5200
+                  </p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6 portfolio-item" style="text-align: left">
+                  <a href="#details" class="show-details" id="show-detail-colima">
+                    <img class="img-responsive hover" src="theme/img/hospital-colima.jpg" alt="">
+                  </a>
+                  <h3>Centro Médico Puerta de Hierro Colima</h3>
+                  <p>
+                    Av. Ignacio Sandoval # 1699 </br>
+                    Col. Los Girasoles, C.P. 28018 </br>
+                    Colima, Colima, México </br>
+                    Tel: +52 (312) 316.2400
+                  </p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-0 portfolio-item" style="text-align: left">
+                </div>
+              </div><!-- END Row 3 -->
+              <div class="row"><!-- Row 4 -->
+                <!-- <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                  <a id="show-concierge" href="#concierge" class="btn btn-outline btn-xl page-scroll">OK</a>
+                </div> -->
+              </div><!-- END Row 4 -->
+          </div>
+      </div>
+  </section>
+  <!-- END HOSPITAL -->
+
+  <!-- DETAILS -->
+  <section id="details" class="">
+    <div class="container">
+      <div class="row"><!-- Row 0 -->
+         <div class="col-lg-12">
+           <!-- these Titles two should match the selected hospital -->
+             <h1 class="page-header" id="name-hospital">Centro Médico Puerta de Hierro Sur
+                 <h4 id="dir-hospital">Tlajomulco de Zúñiga, Jalisco, México</h4>
+             </h1>
+         </div>
+     </div><!-- END Row 0 -->
+     <div class="row"><!-- Row 0.1 -->
+        <div class="col-lg-12">
+          <!-- this  description two should match the selected hospital -->
+          <p id="description-hospital">Lorem Ipsum es simplemente el texto de
+            relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido
+            el texto de relleno estándar de las industrias desde el año 1500,
+            cuando un impresor (N. del T. persona que se dedica a la imprenta)
+            desconocido usó una galería de textos y los mezcló de tal manera
+            que logró hacer un libro de textos especimen. No sólo sobrevivió
+            500 años, sino que tambien ingresó como texto de relleno en
+            documentos electrónicos, quedando esencialmente igual al original.
+            Fue popularizado en los 60s con la creación de las hojas "Letraset",
+             las cuales contenian pasajes de Lorem Ipsum, y más recientemente
+             con software de autoedición, como por ejemplo Aldus PageMaker,
+             el cual incluye versiones de Lorem Ipsum.</p>
+        </div>
+    </div><!-- END Row 0.1 -->
+
+      <div class="row" id="detail-sur"><!-- Row 1.1 -->
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="text-align: left">
+          <!-- Map to the hospital using Free google maps API -->
+          <iframe width="600" height="450" frameborder="0" style="border:50" src="https://www.google.com/maps/embed/v1/place?q=Av.%20Adolfo%20L%C3%B3pez%20Mateos%20Sur%20%23%201401%20Col.%20Las%20Amapas%2C%20C.P.%2045640%20Tlajomulco%20de%20Z%C3%BA%C3%B1iga%2C%20Jalisco%2C%20M%C3%A9xico&key=AIzaSyDS2OgWAthiOBcnjKymvDvQBT0drdrykCA" allowfullscreen></iframe>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12">
+              <ul>
+                  <li><span class="glyphicon glyphicon-earphone"></span> : +52 (33) 3040.7000</li>
+                  <li>
+                    <a target="_blank" href="http://www.visitmexico.com/en/guadalajara">
+                      <span class="glyphicon glyphicon-plane"></span> : More to visit in Guadalajara
+                    </a>
+                  </li>
+              </ul>
+            <h3> Our services: </h3>
+            <ul>
+              <li>Blood bank</li>
+              <li>Check-Up studies</li>
+              <li>Clinical lab</li>
+              <li>Diagnostic Imaging Center</li>
+              <li>Operating and Tourosurgery</li>
+              <li>Maternity Service</li>
+              <li>Hospitalization Service</li>
+              <li>Emergency Service</li>
+              <li>Endoscopy Unit</li>
+              <li>Unit of Hemodynamics</li>
+              <li>Unit of Intermediate Therapy and Intensive Therapy</li>
+              <li>Neonatal Intensive Care Unit</li>
+            </ul>
+          </div>
+        </div><!-- END Row 1.1 -->
+
+        <div class="row" id="detail-zapopan"><!-- Row 1.2 -->
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="text-align: left">
+            <!-- Map to the hospital using Free google maps API -->
+            <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Av.%20Empresarios%20%23%20150%20%20Col.%20Puerta%20de%20Hierro%2C%20C.P.%2045116%20%20Zapopan%2C%20Jalisco%2C%20M%C3%A9xico%20&key=AIzaSyDS2OgWAthiOBcnjKymvDvQBT0drdrykCA" allowfullscreen></iframe>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-12">
+              <ul>
+                <li><span class="glyphicon glyphicon-earphone"></span> : +52 (33) 3848.2100</li>
+                <li>
+                  <a target="_blank" href="http://www.visitmexico.com/en/guadalajara">
+                    <span class="glyphicon glyphicon-plane"></span> : More to visit in Guadalajara
+                  </a>
+                </li>
+              </ul>
+              <h3> Our services: </h3>
+              <ul>
+                <li>Blood bank</li>
+                <li>Check-Up Studies</li>
+                <li>Clinical laboratory</li>
+                <li>Diagnostic Imaging Center</li>
+                <li>Operating and Tourosurgery</li>
+                <li>O-arm® System that provides intraoperative multidimensional
+                  tomography imaging and gives the surgeon 3D images that
+                  allow him to navigate the human body during surgery</li>
+                <li>The tochosurgery area is designed to provide a warm and
+                  safe care to the woman during the process of birth
+                  of her baby</li>
+                <li>Maternity Service</li>
+                <li>Hospitalization Service</li>
+                <li>Emergency Service</li>
+                <li>Unit of Hemodynamics</li>
+                <li>Unit of Intermediate Therapy and Intensive Therapy</li>
+                <li>Neonatal Intensive Care Unit</li>
+              </ul>
+            </div>
+          </div><!-- END Row 1.2 -->
+
+          <div class="row" id="detail-ambulatoria"><!-- Row 1.3 -->
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="text-align: left">
+              <!-- Map to the hospital using Free google maps API -->
+              <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Blvd.%20Puerta%20de%20Hierro%20%23%205150%20%20Col.%20Puerta%20de%20Hierro%2C%20C.P.%2045116%20%20Zapopan%2C%20Jalisco%2C%20M%C3%A9xico%20&key=AIzaSyDS2OgWAthiOBcnjKymvDvQBT0drdrykCA" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <ul>
+                  <li><span class="glyphicon glyphicon-earphone"></span> : +52 (33) 3848.4000</li>
+                  <li>
+                    <a target="_blank" href="http://www.visitmexico.com/en/guadalajara">
+                      <span class="glyphicon glyphicon-plane"></span> : More to visit in Guadalajara
+                    </a>
+                  </li>
+                </ul>
+                <h3> Our services: </h3>
+                <ul>
+                  <li>Check-Up Studies</li>
+                  <li>Short-stay hospitalization service</li>
+                  <li>Ophthalmology</li>
+                  <li>Operating rooms</li>
+                  <li>Endoscopy unit</li>
+                  <li>Hemodialysis unit</li>
+                  <li>Physical Therapy and Rehabilitation Unit</li>
+                </ul>
+              </div>
+            </div><!-- END Row 1.3 -->
+
+            <div class="row" id="detail-tepic"><!-- Row 1.4 -->
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="text-align: left">
+                <!-- Map to the hospital using Free google maps API -->
+                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ6x2YAVc3J4QRqkmyNlSiwb8&key=AIzaSyDS2OgWAthiOBcnjKymvDvQBT0drdrykCA" allowfullscreen></iframe>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                  <ul>
+                    <li><span class="glyphicon glyphicon-earphone"></span> : +52 (311) 129.5200</li>
+                    <li>
+                      <a target="_blank" href="https://www.visitmexico.com/en/travel-journal-tepic-nayarit">
+                        <span class="glyphicon glyphicon-plane"></span> : More to visit in Tepic
+                      </a>
+                    </li>
+                  </ul>
+                  <h3> Our services: </h3>
+                  <ul>
+                    <li>Blood bank</li>
+                    <li>Check Up Studies</li>
+                    <li>Clinical laboratory</li>
+                    <li>Diagnostic Imaging Center</li>
+                    <li>Operating and Tourosurgery</li>
+                    <li>Maternity Service</li>
+                    <li>Hospitalization Service</li>
+                    <li>Emergency Service</li>
+                    <li>Endoscopy Unit</li>
+                    <li>Unit of Hemodynamics</li>
+                    <li>Unit of Intermediate Therapy and Intensive Therapy</li>
+                    <li>Neonatal Intensive Care Unit</li>
+                  </ul>
+                </div>
+              </div><!-- END Row 1.4 -->
+
+              <div class="row" id="detail-colima"><!-- Row 1.5 -->
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="text-align: left">
+                  <!-- Map to the hospital using Free google maps API -->
+                  <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJTYSj6r9aJYQRaH5jGmaQ6Yg&key=AIzaSyDS2OgWAthiOBcnjKymvDvQBT0drdrykCA" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <ul>
+                      <li><span class="glyphicon glyphicon-earphone"></span> : +52 (312) 316.2400</li>
+                      <li>
+                        <a target="_blank" href="http://www.visitmexico.com/en/colima">
+                          <span class="glyphicon glyphicon-plane"></span> : More to visit in Colima
+                        </a>
+                      </li>
+                    </ul>
+                    <h3> Our services: </h3>
+                    <ul>
+                      <li>Blood bank</li>
+                      <li>Check Up Studies</li>
+                      <li>Clinical laboratory</li>
+                      <li>Diagnostic Imaging Center</li>
+                      <li>Operating and Tourosurgery</li>
+                      <li>Maternity Service</li>
+                      <li>Hospitalization Service</li>
+                      <li>Emergency Service</li>
+                      <li>Endoscopy Unit</li>
+                      <li>Unit of Hemodynamics</li>
+                      <li>Unit of Intermediate Therapy and Intensive Therapy</li>
+                      <li>Neonatal Intensive Care Unit</li>
+                    </ul>
+                  </div>
+                </div><!-- END Row 1.5 -->
+
+        </div><!-- END CONTAINER -->
+        <div class="row" id"list-medics"><!-- Row 2  -->
+          <!-- Here we will show a listing of all doctrs of the selected
+          specialty that work on the selected hospital-->
+            <div class="col-lg-12">
+                <h3 class="page-header">Our specialized medics:</h3>
+            </div>
+            <div id="medic-scroller" class="container-fluid my-own-class"><!-- container fluid -->
+
+            </div><!-- END container fluid -->
+        </div><!-- END Row 2 -->
+        <div class="row"><!-- Row 3 -->
+          <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+            <a id="show-concierge" href="#concierge" class="btn btn-outline btn-xl page-scroll">OK</a>
+          </div>
+        </div><!-- END Row 3 -->
+      </div>
+    </section>
+    <!-- END DETAILS -->
+
+    <!-- CONCIERGE -->
+    <section id="concierge" class="features">
+        <div class="container">
+            <div class="row"><!-- Row 1 -->
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Would you like a tourism concierge?</h2>
+                        <p class="text-muted">Would you like a tourism
+                          concierge? An specialized concierge can help you
+                          explore Mexico, so you can enjoy your visit and do
+                          more things than just your medical procedure. </p>
+                        <hr>
+                    </div>
+                </div>
+            </div><!-- END Row 1 -->
+            <div class="row"><!-- Row 2 -->
+              <div class="col-md-4 col-sm-4">
+              </div>
+              <div class="col-md-2 col-sm-2" style="text-align: center">
+                <label class="custom-control custom-radio">
+                  <input id="radio1" name="radio-concierge" type="radio" class="custom-control-input" value="TRUE">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Yes</span>
+                </label>
+              </div>
+              <div class="col-md-2 col-sm-2" style="text-align: center">
+                <label class="custom-control custom-radio">
+                  <input id="radio2" name="radio-concierge" type="radio" class="custom-control-input" value="FALSE">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">NO</span>
+                </label>
+              </div>
+              <div class="col-md-4 col-sm-4">
+              </div>
+            </div><!-- END Row 2 -->
+            <div class="row"><!-- Row 3 -->
+              <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+                <a id="show-form" href="#form" class="btn btn-outline btn-xl page-scroll">OK</a>
+                <!-- the .css must be changed to make this button a different
+                color than white, so we can see it -->
+              </div>
+            </div><!-- END Row 3 -->
+          </div>
+    </section>
+    <!-- END CONCIERGE -->
+
+    <!-- FORM -->
+    <section id="form" class="contact bg-primary">
+        <div class="container">
+            <h2>Fill the form</h2>
+            <h4>We will get in contact with you as soon as possible</h4>
+            <div class="row" style="text-align: center"><!-- Row 1 -->
+              <div class="col-md-2 col-sm-2 col-xs-0">
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                <input id="fname" class="form-control" type="text" placeholder="First name"></br>
+                <input id="lname" class="form-control" type="text" placeholder="Last name"></br>
+                <input id="email" class="form-control" type="text" placeholder="Email. example@mail.com"></br>
+                <input id="phone" class="form-control" type="text" placeholder="Phone number"></br>
+                <input id="birthdate" class="form-control" type="text" placeholder="Birth date. format: DD-MM-YYYY"></br>
+                <div class="form-check form-check-inline">
+                  Gender:
+                  <label class="custom-control custom-radio">
+                    <input id="gender-f" name="radio-gender" type="radio" class="custom-control-input" value="FEMALE">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Female  </span>
+                  </label>
+                  <label class="custom-control custom-radio">
+                    <input id="gender-m" name="radio-gender" type="radio" class="custom-control-input" value="MALE">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Male  </span>
+                  </label>
+                  <label class="custom-control custom-radio">
+                    <input id="gender-o" name="radio-gender" type="radio" class="custom-control-input" value="OTHER">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Other  </span>
+                  </label>
+              </div></br>
+              <p>Country of origin: </p>
+              <select id="country" class="form-control">
+                <!-- Here there must be a way to display here all
+                (or at least many) countries here as options for the
+                patient to choose from-->
+                <option value="none"> - select - </option>
+                <option value="U.S.A">U.S.A</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+              </select>
+              <div class="col-md-2 col-sm-2 col-xs-0">
+              </div></br>
+            </div></br>
+        </div><!-- END Row 1 -->
+        <div class="row"><!-- Row 2 -->
+          <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center">
+            <a  id="button-send" href="#page-top" class="btn btn-outline btn-xl page-scroll">SEND</a>
+            <!-- this button should send the contents of the form
+            to the database-->
+          </div>
+        </div><!-- END Row 2 -->
+    </section>
+    <!-- END FORM -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 MedicTour / Céntro Médico Puerta de Hierro</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="theme/js/new-age.min.js"></script>
+
+    <!-- CSS -->
+    <!-- change outline color-->
+    <style>
+      .hover:hover{
+        border: 5px solid #2B4A78;
+      }
+      @media (min-width: 992px) {
+        .container-fluid.my-own-class {
+          overflow-x: scroll;
+          white-space: nowrap;
+        }
+        .container-fluid.my-own-class .col-sm-3 {
+          display: inline-block;
+          vertical-align: top;
+          float: none;
+        }
+      }
+    </style>
+
+  </body>
+</html>
